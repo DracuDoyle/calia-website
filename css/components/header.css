@@ -128,9 +128,35 @@ header nav ul li a:hover::after {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.nav-project-name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
 
 
 @media( max-width: 768px ) {
+  
+  header nav {
+    padding: 1rem;
+  }
+
+  header nav h1 {
+    font-size: 1rem;
+  }
+
+  .nav-project-name {
+    font-size: 1rem;
+  }
   
   #menu-toggle {
     display: flex;

@@ -1,0 +1,85 @@
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 5rem 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+.hero-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 20px;
+  padding: 0.3rem 0.8rem;
+  width: fit-content;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.14em;
+  margin: 0;
+}
+
+.hero-acronym {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  max-width: 480px;
+}
+
+.hero-tagline {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  font-style: italic;
+  max-width: 480px;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 280px;
+  height: 280px;
+  object-fit: contain;
+  border-radius: 24px;
+}
+
+@media (max-width: 768px) {
+  
+  #hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .hero-image {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+}
