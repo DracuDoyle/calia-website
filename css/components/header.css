@@ -1,0 +1,174 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg-header);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--border-ghost);
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.2rem 2rem;
+}
+
+header nav h1 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.14em;
+  position: relative;
+  user-select: none;
+}
+
+header nav h1::after {
+  content: '';
+  display: block;
+  margin-top: 3px;
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  opacity: 0.4;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+header nav ul li a {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: var(--accent);
+}
+
+header nav ul li a:hover::after {
+  width: 100%;
+}
+
+#theme-toggle {
+  background: none;
+  border: 1px solid var(--border-ghost-elements);
+  color: var(--accent-dim);
+  cursor: pointer;
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+#lang-toggle {
+  background: none;
+  border: 1px solid var(--border-ghost-elements);
+  color: var(--accent-dim);
+  cursor: pointer;
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.90rem;
+  letter-spacing: 0.1em;
+  font-family: var(--font-body);
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+#lang-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+#menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: 1px solid var(--border-ghost);
+  cursor: pointer;
+  padding: 0.4rem 0.5rem;
+  border-radius: 6px;
+}
+
+#menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--accent);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+
+@media( max-width: 768px ) {
+  
+  #menu-toggle {
+    display: flex;
+  }
+
+  header nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    background-color: var(--bg-header);
+    border-bottom: 2px solid var(--border-ghost);
+    padding: 1rem 0;
+  }
+
+  header nav ul.open {
+    display: flex;
+  }
+
+  header nav ul li a {
+    padding: 0.8rem 2rem;
+    display: block;
+  }
+
+  header nav #menu-toggle.open span:nth-child( 1 ) {
+    transform: translateY( 7px ) rotate( 45deg );
+  }
+
+  header nav #menu-toggle.open span:nth-child( 2 ) {
+    opacity: 0;
+  }
+
+  header nav #menu-toggle.open span:nth-child( 3 ) {
+    transform: translateY( -7px ) rotate( -45deg );
+  }
+
+}

@@ -1,0 +1,44 @@
+:root {
+  --bg-primary:      #0c0d14;                       /* color de fondo principal */
+  --bg-surface:      #11131e;                       /* color de fondo para elementos */
+  --accent:          #8ab4f8;                       /* color de acento */
+  --accent-dim:      rgba(138, 180, 248, 0.80);     /* color de acento apagado */
+  --text-primary:    #d0d8f0;                       /* color del texto principal */
+  --text-muted:      rgba(180, 190, 220, 0.80);     /* color del texto secundario */
+  --border-ghost:    rgba(100, 140, 220, 0.12);     /* color de las lineas */
+  --border-ghost-elements: rgba(100, 140, 220, 0.40);     /* color de las lineas de los elementos, el borde */
+  --font-display:    'Cinzel', serif;                 /* fuente de titulos */
+  --font-body:       'Raleway', sans-serif;           /* fuente de texto general */
+  --bg-header: rgba(14, 14, 18, 0.92);              /* color de fondo del header */
+}
+
+:root.light {                                         /* tema claro */
+  --bg-primary:   #f0f2f8;
+  --bg-surface:   #e4e8f4;
+  --accent:       #3a6fd8;
+  --accent-dim:   rgba(58, 111, 216, 0.80);
+  --text-primary: #1a1d2e;
+  --text-muted:   rgba(40, 50, 90, 0.80);
+  --border-ghost: rgba(58, 111, 216, 0.12);
+  --border-ghost-elements: rgba(58, 111, 216, 0.40);
+  --bg-header: rgba(240, 242, 248, 0.92);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.75;
+  min-height: 100vh;
+}
