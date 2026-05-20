@@ -1,0 +1,72 @@
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--border-ghost);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  flex: 1 1 200px;
+}
+
+.contact-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.contact-card div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.contact-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.contact-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+#copy-btn {
+  margin-left: auto;
+  background: none;
+  border: 1px solid var(--border-ghost);
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+#copy-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+#copy-btn.copied {
+  color: #6dbf8b;
+  border-color: #6dbf8b;
+}
+
+#portfolio-card {
+  border-color: #5b9bd5;
+}
+
+#portfolio-card:hover {
+  border-color: #9b7fd4;
+  background-color: rgba(155, 127, 212, 0.08);
+}
