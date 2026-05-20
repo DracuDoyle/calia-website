@@ -7,25 +7,20 @@ const langIcon = document.getElementById( 'lang-icon' );
 
 function applyTranslations( lang ) {
 
-    const elements = document.querySelectorAll( '[data-i18n]' );
+	const elements = document.querySelectorAll( '[data-i18n]' );
 
-    elements.forEach( el => {
-        
-        const key = el.getAttribute( 'data-i18n' );
-        
-        if( translations[ lang ][ key ] ) {
-            
-            if( el.getAttribute( 'data-i18n' ) === 'about_title' ) {
-                el.innerHTML = translations[ lang ][ key ] + ' <span class="highlight">Bayron Fregoso</span>';
-            } else {
-                el.textContent = translations[ lang ][ key ];
-            }
-        
-        }
-    } );
+  	elements.forEach( el => {
+
+    	const key = el.getAttribute( 'data-i18n' );
+
+    	if( translations[ lang ][ key ] ) {
+      		el.textContent = translations[ lang ][ key ];
+    	}
+
+  	} );
   
-    document.documentElement.setAttribute( 'lang', lang );
-    langIcon.textContent = lang === 'en' ? 'ES' : 'EN';
+	document.documentElement.setAttribute( 'lang', lang );
+  	langIcon.textContent = lang === 'en' ? 'ES' : 'EN';
 
 }
 
