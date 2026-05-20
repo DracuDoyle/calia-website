@@ -84,6 +84,13 @@
   border-radius: 24px;
 }
 
+.hero-author {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  margin-top: 0.5rem;
+}
+
 @media (max-width: 768px) {
   
   #hero {
